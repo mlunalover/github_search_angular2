@@ -10,7 +10,12 @@
           <a class="btn btn-default btn-block" href="{{user.html_url}}" target="_blank">View Profile</a>
         </div>
         <div class="col-md-4">
-
+          <div class="stats">
+            <span class="label label-primary">{{user.public_repos}} Public Repos</span>
+            <span class="label label-success">{{user.public_gists}} Public Gists</span>
+            <span class="label label-info">{{user.followers}} Followers</span>
+            <span class="label label-warning">{{user.following}} Following</span>
+          </div>
         </div>
       </div>
     </div>
