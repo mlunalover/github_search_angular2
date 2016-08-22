@@ -8,7 +8,8 @@ export class GithubService {
 
   constructor(private _http:Http) {
     console.log('github service ready...');
-    this.username = 'mlunalover';
+    this.username = '';
+    // this.username = 'mlunalover';
   }
 
   getUser() {
@@ -19,6 +20,10 @@ export class GithubService {
   getRepos() {
     return this._http.get('http://api.github.com/users/' + this.username + '/repos')
         .map(res => res.json())
+  }
+
+  updateUser(username:string) {
+    this.username = username;
   }
 
 }
